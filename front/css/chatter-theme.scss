@@ -1,0 +1,334 @@
+// compileCompressed: chatter-theme.css
+
+$white : #FFFFFF;
+$black : #000000;
+$wahcolor: #216073;
+
+@mixin border_radius( $px ){
+    -webkit-border-radius: $px;
+    -moz-border-radius: $px;
+    border-radius: $px;
+}
+
+@mixin clear {
+    &:before,
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+#chatter-box {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background: $white;
+    color: $black;
+    width:400px;
+    z-index: 9999;
+    .chatter-box-header {
+        padding: 5px 0;
+        text-align: center;
+        color: $white;
+        background: $wahcolor;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            font-size: 16px;
+            margin:0;
+            padding: 0;
+            small {
+                font-size: 11px;
+                a {
+                    font-size: inherit;
+                    text-decoration: underline;
+                    color: $white;
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.chatter-hidden {
+        .toggle-chatter-box {
+            &:after {
+                content:'Chatter';
+                display: block;
+                position: absolute;
+                font-size: 14px;
+                top: 0;
+                right: 100%;
+                font-weight: bold;
+                background: $wahcolor;
+                color: $white;
+                height: 32px;
+                line-height: 32px;
+                padding: 0 10px;
+            }
+        }
+    }
+    .toggle-chatter-box {
+        position: absolute;
+        background: $wahcolor;
+        color: $white;
+        width: 32px;
+        height: 32px;
+        top: -32px;
+        left: auto;
+        right: 0;
+        font-size: 24px;
+        span {
+            display: block;
+            height: 31px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .chatter-box-container-inner {
+        height: 460px;
+    }
+    .chatter-box-footer {
+        padding: 5px;
+        text-align: center;
+        font-size: 12px;
+        p {
+            margin:0;
+            padding: 0;
+            line-height: 1;
+            font-size: 12px;
+            small {
+                font-size: 12px;
+            }
+            a {
+                color: $wahcolor;
+                font-size: 12px;
+                text-decoration: underline;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
+
+.chatter-box-messages {
+    padding: 8px;
+    height: 320px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    &.loading {
+        &:before {
+            position: absolute;
+            content:'';
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(33, 96, 115, 0.5);
+        }
+    }
+    &.chatter-manager-box-on {
+        height: 280px;
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $wahcolor;
+        outline: 1px solid slategrey;
+        @include border_radius(5px);
+    }
+}
+
+.chatter-message {
+    background: rgba(35, 100, 120, 0.25);
+    margin-bottom: 10px;
+    padding: 5px;
+    border:0;
+    display: block;
+    width: 95%;
+    float: right;
+    text-align: left;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    padding-right: 30px;
+
+    .chatter-message-dropdown {
+        position: absolute;
+        right: 3px;
+        top: 6px;
+        .chatter-dropdown-button {
+            cursor: pointer;
+            padding: 0 5px;
+            span {
+                display: block;
+                width: 4px;
+                height: 4px;
+                margin: 3px 0;
+                @include border_radius(2px);
+                background: $black;
+            }
+        }
+        .chatter-dropdown-menu {
+            display: block;
+            z-index: 1;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: $white;
+            padding: 10px;
+            @include border_radius(3px);
+            -webkit-box-shadow: 10px 10px 22px -2px rgba(0,0,0,0.29);
+            -moz-box-shadow: 10px 10px 22px -2px rgba(0,0,0,0.29);
+            box-shadow: 10px 10px 22px -2px rgba(0,0,0,0.29);
+            &[aria-hidden="true"]{
+                display: none;
+                z-index: -1;
+            }
+            ul {
+                margin:0;
+                padding: 0;
+                line-height: 1;
+                list-style-type: none;
+                white-space: nowrap;
+                font-size: 13px;
+                li {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    &.is_comment_author {
+        background-color: #e6e5e5;
+        float: left;
+    }
+
+    @include clear;
+    @include border_radius( 6px );
+    .chatter-message-author {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        span.date-time {
+            font-style: normal;
+            font-size: 11px;
+        }
+    }
+    .chatter-message-content {
+        font-size: 13px;
+        word-break: break-word;
+        &.is-rtl {
+            direction: rtl;
+            text-align: right;
+        }
+    }
+}
+
+.chatter-box-submit-message {
+    padding: 8px;
+    textarea{
+        margin: 0 !important;
+        height: 80px !important;
+        max-height: 80px !important;
+        min-height: 80px !important;
+        color: $black;
+        font-size: 13px;
+        border: 1px solid $wahcolor;
+        @include border_radius(3px);
+        resize: none !important;
+        &.chatter-input-error {
+            border: 1px solid red;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: lighten($black, 5%);
+            font-size: 13px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: lighten($black, 5%);
+            font-size: 13px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: lighten($black, 5%);
+            font-size: 13px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: lighten($black, 5%);
+            font-size: 13px;
+        }
+    }
+    button {
+        background: $wahcolor;
+        color: $white;
+        font-size: 12px;
+        border:0;
+        margin: 4px 0 0 0;
+        height: 23px;
+        padding: 0 12px;
+        @include border_radius(10px);
+    }
+    form {
+        position: relative;
+        p.form-description {
+            font-size: 12px;
+            margin:0;
+        }
+    }
+}
+
+.chatter-user-avatar {
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    @include border_radius(50%);
+}
+.logged-in-only-submit-placeholder {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+select[name="chatter-users-select"]{
+    height: 38px;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    margin: 0;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: normal;
+    color: #0a0a0a;
+    background-color: #fefefe;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: 9px 6px;
+    background-position: right -1rem center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    padding-right: 1.5rem;
+}
+span.keyboard-desc {
+    font-size: 12px;
+}
+
+.chatter-copy-text-btn {
+    border:0 !important;
+    &.copied {
+        color: green !important;
+    }
+}

@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-05 16:58+0300\n"
+"PO-Revision-Date: 2020-04-05 16:58+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: admin/functions.php:6
+msgid "From user"
+msgstr ""
+
+#: admin/functions.php:7
+msgid "To user"
+msgstr ""
+
+#: admin/functions.php:8 admin/functions.php:50
+msgid "Status"
+msgstr ""
+
+#: admin/functions.php:43
+msgid "Chatter settings"
+msgstr ""
+
+#: admin/functions.php:52
+msgid "Active"
+msgstr ""
+
+#: admin/functions.php:53
+msgid "Closed"
+msgstr ""
+
+#: admin/option-page.php:22
+msgid "Please, login first"
+msgstr ""
+
+#: admin/option-page.php:34 front/functions.php:173 inc/single-message.php:22
+msgid "Copy message text"
+msgstr ""
+
+#: admin/option-page.php:65
+msgid "Chatter general settings"
+msgstr ""
+
+#: admin/option-page.php:71
+msgid "Select chat manager user"
+msgstr ""
+
+#: admin/option-page.php:74
+msgid "Select chat manager"
+msgstr ""
+
+#: admin/option-page.php:88
+msgid "Refresh chat every (seconds)"
+msgstr ""
+
+#: admin/option-page.php:97
+msgid "Disable Chatter?"
+msgstr ""
+
+#: admin/option-page.php:117
+msgid "Display user avatar"
+msgstr ""
+
+#: admin/option-page.php:126
+msgid "Load Chatter as closed box"
+msgstr ""
+
+#: admin/option-page.php:135
+msgid ""
+"Send email notification to the chat manager when new chat has been created"
+msgstr ""
+
+#: admin/option-page.php:142
+msgid "Labels (translation)"
+msgstr ""
+
+#: admin/option-page.php:147
+msgid "Chatter header title"
+msgstr ""
+
+#: admin/option-page.php:156
+msgid "Please, login first message"
+msgstr ""
+
+#: admin/option-page.php:165
+msgid "Copy message text label"
+msgstr ""
+
+#: front/functions.php:283
+msgid "New Chatter has been submitted"
+msgstr ""
+
+#: front/functions.php:285
+msgid "New Chatter has been submitted."
+msgstr ""
+
+#: front/view.php:46
+msgid "Select chat"
+msgstr ""
+
+#: front/view.php:68
+msgid "Send"
+msgstr ""
+
+#: front/view.php:69
+msgid "Press CTRL+Enter for submit"
+msgstr ""
+
+#: inc/register-post-type.php:8
+msgctxt "Post Type General Name"
+msgid "Chatter"
+msgstr ""
+
+#: inc/register-post-type.php:9
+msgctxt "Post Type Singular Name"
+msgid "Chatter"
+msgstr ""
+
+#: inc/register-post-type.php:10 inc/register-post-type.php:11
+#: inc/register-post-type.php:37 inc/register-post-type.php:38
+msgid "Chatter"
+msgstr ""
+
+#: inc/register-post-type.php:12
+msgid "Item Archives"
+msgstr ""
+
+#: inc/register-post-type.php:13
+msgid "Item Attributes"
+msgstr ""
+
+#: inc/register-post-type.php:14
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/register-post-type.php:15
+msgid "All Items"
+msgstr ""
+
+#: inc/register-post-type.php:16
+msgid "Add New Item"
+msgstr ""
+
+#: inc/register-post-type.php:17
+msgid "Add New"
+msgstr ""
+
+#: inc/register-post-type.php:18
+msgid "New Item"
+msgstr ""
+
+#: inc/register-post-type.php:19
+msgid "Edit Item"
+msgstr ""
+
+#: inc/register-post-type.php:20
+msgid "Update Item"
+msgstr ""
+
+#: inc/register-post-type.php:21
+msgid "View Item"
+msgstr ""
+
+#: inc/register-post-type.php:22
+msgid "View Items"
+msgstr ""
+
+#: inc/register-post-type.php:23
+msgid "Search Item"
+msgstr ""
+
+#: inc/register-post-type.php:24
+msgid "Not found"
+msgstr ""
+
+#: inc/register-post-type.php:25
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/register-post-type.php:26
+msgid "Featured Image"
+msgstr ""
+
+#: inc/register-post-type.php:27
+msgid "Set featured image"
+msgstr ""
+
+#: inc/register-post-type.php:28
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/register-post-type.php:29
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/register-post-type.php:30
+msgid "Insert into item"
+msgstr ""
+
+#: inc/register-post-type.php:31
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/register-post-type.php:32
+msgid "Items list"
+msgstr ""
+
+#: inc/register-post-type.php:33
+msgid "Items list navigation"
+msgstr ""
+
+#: inc/register-post-type.php:34
+msgid "Filter items list"
+msgstr ""

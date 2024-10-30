@@ -1,0 +1,136 @@
+//compileCompressed: chatter-admin.css
+
+$white : #FFFFFF;
+$black : #000000;
+$wahcolor: #236478;
+
+.form-row {
+    margin-bottom: 12px;
+    &:before,
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+    .input-wrapper {
+        &:before,
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        label {
+            width: 280px;
+            display: block;
+            float: left;
+            line-height: 26px;
+            font-weight: bold;
+        }
+        input {
+            width: 200px;
+            float: left;
+            &[type="checkbox"]{
+                width: auto;
+                margin: 0;
+                position: relative;
+                top: 8px;
+            }
+        }
+    }
+}
+
+.chatter-admin-notice {
+    padding: 8px;
+    font-size: 16px;
+    color: $white;
+    background: $wahcolor;
+    a {
+        color: $white;
+        text-decoration: underline;
+        &:hover,
+        &:focus {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+#poststuff {
+    #chatter-settings-box-id {
+        .inside {
+            label {
+                display: block;
+                clear: both;
+                border-bottom:1px solid silver;
+                padding-bottom: 10px;
+                margin-bottom: 5px;
+                &:last-child{
+                    border: 0;
+                }
+                &:before,
+                &:after {
+                    clear: both;
+                    content:'';
+                    display: block;
+                }
+                &.select-in {
+                    span {
+                        width: 50%;
+                        float: left;
+                        line-height: 30px;
+                        display: inline-block;
+                    }
+                    select {
+                        width: 49%;
+                        float: right;
+                    }
+                }
+                &.textarea-in {
+                    span {
+                        width: 100%;
+                        float: left;
+                        line-height: 30px;
+                        display: inline-block;
+                        margin-bottom: 5px;
+                    }
+                    textarea {
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wp-chatter_manager_mail_body-wrap {
+    float: left;
+    width: 100%;
+}
+
+.chatter-admin-banner {
+    a {
+        position: relative;
+        text-decoration: none;
+        .titles {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            bottom: 10px;
+        }
+        h3 {
+            background: #d54e21;
+            color: $white;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        h4 {
+            color: $white;
+            margin: 0;
+        }
+        &:hover {
+            h3 {
+                background: #000;
+            }
+        }
+    }
+}
